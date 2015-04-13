@@ -1,5 +1,7 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../web-resource/web-resource-scripts.html">
+
+<link rel="import" href="pubmed-eutils.html">
+<link rel="import" href="pubmed-links.html">
 
 <!--
 Element displaying a PubMed article and citations/references
@@ -24,30 +26,9 @@ Element displaying a PubMed article and citations/references
       </div>
     </template>
 
-    <template if="{{ citations }}">
-      <div class="links-container">
-        <div class="heading">
-          <a href="http://www.ncbi.nlm.nih.gov/pmc/?linkname=pubmed_pubmed_citedin&from_uid={{ pmid }}">Cited By</a>
-        </div>
-        <div class="links">
-          <template repeat="{{ citations }}">
-            <pubmed-article article="{{}}"></pubmed-article>
-          </template>
-        </div>
-      </div>
-    </template>
-
-    <template if="{{ references }}">
-      <div class="links-container">
-        <div class="heading">
-          <a href="http://www.ncbi.nlm.nih.gov/pmc/?linkname=pubmed_pubmed_refs&from_uid={{ pmid }}">References</a>
-        </div>
-        <div class="links">
-          <template repeat="{{ references }}">
-            <pubmed-article article="{{}}"></pubmed-article>
-          </template>
-        </div>
-      </div>
+    <template if="{{ showLinks &amp;&amp; pmid }}">
+      <pubmed-links linkname="pubmed_pubmed_citedin" pmid="{{ pmid }}" heading="Cited By"></pubmed-links>
+      <pubmed-links linkname="pubmed_pubmed_refs" pmid="{{ pmid }}" heading="References"></pubmed-links>
     </template>
   </template>
 

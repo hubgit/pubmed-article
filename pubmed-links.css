@@ -1,14 +1,17 @@
 :host {
   display: block;
+}
+
+.heading {
+  font-weight: bold;
+  margin-top: 10px;
   margin-bottom: 5px;
 }
 
-.title {
-  display: block;
-  margin-left: 10px;
+.heading a {
   text-decoration: none;
 }
 
-pubmed-links {
+.links {
   margin-left: 10px;
 }

@@ -1,0 +1,24 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<link rel="import" href="pubmed-eutils.html">
+<link rel="import" href="pubmed-article.html">
+
+<polymer-element name="pubmed-links" attributes="linkname pmid heading">
+  <template>
+    <link rel="stylesheet" href="pubmed-links.css">
+
+    <template if="{{ items }}">
+      <div class="heading">
+        <a href="http://www.ncbi.nlm.nih.gov/pmc/?linkname={{ linkname }}&amp;from_uid={{ pmid }}">{{ heading }}</a>
+      </div>
+
+      <div class="links">
+        <template repeat="{{ items }}">
+          <pubmed-article article="{{}}"></pubmed-article>
+        </template>
+      </div>
+    </template>
+  </template>
+
+  <script src="pubmed-links.js"></script>
+</polymer-element>
