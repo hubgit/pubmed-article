@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+.heading {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.heading a {
+  text-decoration: none;
+}
+
+.links {
+  margin-left: 10px;
+}

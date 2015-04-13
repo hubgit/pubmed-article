@@ -1,0 +1,24 @@
+{
+  "name": "pubmed-article",
+  "keywords": [
+    "seed",
+    "polymer",
+    "web-components"
+  ],
+  "main": "pubmed-article.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5.4",
+    "web-resource": "hubgit/web-resource"
+  },
+  "homepage": "https://github.com/hubgit/pubmed-article",
+  "_release": "89a5d4a24d",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "89a5d4a24d80663b00fb78032b77fcd4871bd152"
+  },
+  "_source": "git://github.com/hubgit/pubmed-article.git",
+  "_target": "master",
+  "_originalSource": "hubgit/pubmed-article",
+  "_direct": true
+}

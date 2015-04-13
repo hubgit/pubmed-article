@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.title {
+  display: block;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+pubmed-links {
+  margin-left: 10px;
+}

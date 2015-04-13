@@ -1,0 +1,14 @@
+{
+  "name": "pubmed-article",
+  "version": "0.0.1",
+  "keywords": [
+    "seed",
+    "polymer",
+    "web-components"
+  ],
+  "main": "pubmed-article.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5.4",
+    "web-resource": "hubgit/web-resource"
+  }
+}
