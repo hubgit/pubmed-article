@@ -26,7 +26,9 @@ Element displaying a PubMed article and citations/references
 
     <template if="{{ citations }}">
       <div class="links-container">
-        <div class="heading">Cited By</div>
+        <div class="heading">
+          <a href="http://www.ncbi.nlm.nih.gov/pmc/?linkname=pubmed_pubmed_citedin&from_uid={{ pmid }}">Cited By</a>
+        </div>
         <div class="links">
           <template repeat="{{ citations }}">
             <pubmed-article article="{{}}"></pubmed-article>
@@ -37,7 +39,9 @@ Element displaying a PubMed article and citations/references
 
     <template if="{{ references }}">
       <div class="links-container">
-        <div class="heading">References</div>
+        <div class="heading">
+          <a href="http://www.ncbi.nlm.nih.gov/pmc/?linkname=pubmed_pubmed_refs&from_uid={{ pmid }}">References</a>
+        </div>
         <div class="links">
           <template repeat="{{ references }}">
             <pubmed-article article="{{}}"></pubmed-article>

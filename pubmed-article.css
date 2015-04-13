@@ -3,6 +3,10 @@
   margin-bottom: 5px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .heading {
   font-weight: bold;
   margin-top: 10px;
@@ -12,7 +16,6 @@
 .title {
   display: block;
   margin-left: 10px;
-  text-decoration: none;
 }
 
 .links-container,
