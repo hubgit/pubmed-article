@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.heading {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.title {
+  display: block;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.links-container,
+.links {
+  margin-left: 10px;
+}

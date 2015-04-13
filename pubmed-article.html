@@ -1,0 +1,51 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../web-resource/web-resource-scripts.html">
+
+<!--
+Element displaying a PubMed article and citations/references
+
+##### Example
+
+    <pubmed-article pmid="24901476" showLinks></pubmed-article>
+
+@element pubmed-article
+@blurb Element displaying a PubMed article and citations/references
+@status alpha
+@homepage https://github.com/hubgit/pubmed-article
+-->
+<polymer-element name="pubmed-article" attributes="article pmid doi showLinks">
+  <template>
+    <link rel="stylesheet" href="pubmed-article.css">
+
+    <template bind="{{ article }}">
+      <div>
+        <div class="date">{{ date }}</div>
+        <a class="title" flex href="https://pubmed.gov/{{ uid }}">{{ title }}</a>
+      </div>
+    </template>
+
+    <template if="{{ citations }}">
+      <div class="links-container">
+        <div class="heading">Cited By</div>
+        <div class="links">
+          <template repeat="{{ citations }}">
+            <pubmed-article article="{{}}"></pubmed-article>
+          </template>
+        </div>
+      </div>
+    </template>
+
+    <template if="{{ references }}">
+      <div class="links-container">
+        <div class="heading">References</div>
+        <div class="links">
+          <template repeat="{{ references }}">
+            <pubmed-article article="{{}}"></pubmed-article>
+          </template>
+        </div>
+      </div>
+    </template>
+  </template>
+
+  <script src="pubmed-article.js"></script>
+</polymer-element>
